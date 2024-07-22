@@ -75,23 +75,6 @@
   },
   "repository": "https://github.com/umijs/niddle",
   "packageManager": "yarn@4.3.1",
-  "description": "A super fast html parser and manipulator written in rust.",
-  "optionalDependencies": {
-    "@niddle-rs/niddle-win32-x64-msvc": "0.2.3",
-    "@niddle-rs/niddle-darwin-x64": "0.2.3",
-    "@niddle-rs/niddle-linux-x64-gnu": "0.2.3",
-    "@niddle-rs/niddle-darwin-arm64": "0.2.3",
-    "@niddle-rs/niddle-android-arm64": "0.2.3",
-    "@niddle-rs/niddle-linux-arm64-gnu": "0.2.3",
-    "@niddle-rs/niddle-linux-arm64-musl": "0.2.3",
-    "@niddle-rs/niddle-win32-arm64-msvc": "0.2.3",
-    "@niddle-rs/niddle-linux-arm-gnueabihf": "0.2.3",
-    "@niddle-rs/niddle-linux-arm-musleabihf": "0.2.3",
-    "@niddle-rs/niddle-linux-x64-musl": "0.2.3",
-    "@niddle-rs/niddle-freebsd-x64": "0.2.3",
-    "@niddle-rs/niddle-win32-ia32-msvc": "0.2.3",
-    "@niddle-rs/niddle-android-arm-eabi": "0.2.3",
-    "@niddle-rs/niddle-darwin-universal": "0.2.3",
-    "@niddle-rs/niddle-linux-riscv64-gnu": "0.2.3"
-  }
+  "description": "A super fast html parser and manipulator written in rust."
 }
+
