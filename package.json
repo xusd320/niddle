@@ -77,4 +77,3 @@
   "packageManager": "yarn@4.3.1",
   "description": "A super fast html parser and manipulator written in rust."
 }
-
