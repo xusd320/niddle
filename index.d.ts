@@ -64,9 +64,9 @@ export declare class NodeRepr {
   removeAttribute(name: string): void
   /** Remove all attributes of this node */
   removeAllAttributes(): void
-  /** Select the the fist node that match the given selector, like document.querySelector. */
+  /** Select the the fist node that match the given css selector, like document.querySelector. */
   select(selectors: string): NodeRepr | null
-  /** Select all nodes that match the given selector, like document.querySelectorAll. */
+  /** Select all nodes that match the given css selector, like document.querySelectorAll. */
   selectAll(selectors: string): Array<NodeRepr>
   /** Get all children nodes of this node. */
   getChildren(): Array<NodeRepr>
@@ -90,4 +90,11 @@ export declare class NodeRepr {
   clone(): NodeRepr
   /** Clone this node to a new instance, including its all descendants. */
   cloneRecursive(): NodeRepr
+}
+export declare interface NodeRepr {
+  /** The node object, cann't be instantiated in javascript. So call the constructor will throw an error */
+  constructor(): void;
+  select(selectors: "html"): NodeRepr;
+  select(selectors: "head"): NodeRepr;
+  select(selectors: "body"): NodeRepr;
 }

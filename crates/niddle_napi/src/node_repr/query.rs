@@ -8,13 +8,13 @@ use super::NodeRepr;
 
 #[napi]
 impl NodeRepr {
-  /// Select the the fist node that match the given selector, like document.querySelector.
+  /// Select the the fist node that match the given css selector, like document.querySelector.
   #[napi]
   pub fn select(&self, selectors: String) -> Option<NodeRepr> {
     self.0.select_first(&selectors).ok().map(Into::into)
   }
 
-  /// Select all nodes that match the given selector, like document.querySelectorAll.
+  /// Select all nodes that match the given css selector, like document.querySelectorAll.
   #[napi]
   pub fn select_all(&self, selectors: String) -> Vec<NodeRepr> {
     self

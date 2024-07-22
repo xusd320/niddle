@@ -30,6 +30,17 @@
       ]
     }
   },
+  "keywords": [
+    "htmlparser",
+    "jquery",
+    "selector",
+    "scraper",
+    "parser",
+    "dom",
+    "html",
+    "rust",
+    "napi"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@napi-rs/cli": "^2.18.4",
@@ -53,16 +64,34 @@
     "artifacts": "napi artifacts",
     "build": "napi build --platform --release --cargo-name niddle_napi",
     "build:debug": "napi build --platform --cargo-name niddle_napi",
-    "prepublishOnly": "yarn patchdts && napi prepublish -t npm",
+    "prepublishOnly": "yarn patchdts && yarn docs && napi prepublish -t npm",
     "universal": "napi universal",
     "version": "napi version",
     "test": "ava",
     "patchdts": "cat ./patch.d.ts >> ./index.d.ts",
     "benchmark": "node ./benchmark/benchmark.mjs",
     "prepare": "husky install",
-    "docs": "npx typedoc ./index.d.ts && mv ./docs/README.md ./README.md"
+    "docs": "npx typedoc && mv ./docs/README.md ./README.md"
   },
   "repository": "https://github.com/umijs/niddle",
   "packageManager": "yarn@4.3.1",
-  "description": "A super fast html parser and manipulator written in rust."
+  "description": "A super fast html parser and manipulator written in rust.",
+  "optionalDependencies": {
+    "@niddle-rs/niddle-win32-x64-msvc": "0.2.3",
+    "@niddle-rs/niddle-darwin-x64": "0.2.3",
+    "@niddle-rs/niddle-linux-x64-gnu": "0.2.3",
+    "@niddle-rs/niddle-darwin-arm64": "0.2.3",
+    "@niddle-rs/niddle-android-arm64": "0.2.3",
+    "@niddle-rs/niddle-linux-arm64-gnu": "0.2.3",
+    "@niddle-rs/niddle-linux-arm64-musl": "0.2.3",
+    "@niddle-rs/niddle-win32-arm64-msvc": "0.2.3",
+    "@niddle-rs/niddle-linux-arm-gnueabihf": "0.2.3",
+    "@niddle-rs/niddle-linux-arm-musleabihf": "0.2.3",
+    "@niddle-rs/niddle-linux-x64-musl": "0.2.3",
+    "@niddle-rs/niddle-freebsd-x64": "0.2.3",
+    "@niddle-rs/niddle-win32-ia32-msvc": "0.2.3",
+    "@niddle-rs/niddle-android-arm-eabi": "0.2.3",
+    "@niddle-rs/niddle-darwin-universal": "0.2.3",
+    "@niddle-rs/niddle-linux-riscv64-gnu": "0.2.3"
+  }
 }

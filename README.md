@@ -82,6 +82,20 @@ Clone this node to a new instance, including its all descendants.
 
 [index.d.ts:92](https://github.com/umijs/niddle/blob/main/index.d.ts#L92)
 
+##### constructor()
+
+> **constructor**(): `void`
+
+The node object, cann't be instantiated in javascript. So call the constructor will throw an error
+
+###### Returns
+
+`void`
+
+###### Defined in
+
+[index.d.ts:96](https://github.com/umijs/niddle/blob/main/index.d.ts#L96)
+
 ##### getAttribute()
 
 > **getAttribute**(`name`): `string`
@@ -340,9 +354,11 @@ Remove an attribute of this node by name
 
 ##### select()
 
+###### select(selectors)
+
 > **select**(`selectors`): [`NodeRepr`](README.md#noderepr)
 
-Select the the fist node that match the given selector, like document.querySelector.
+Select the the fist node that match the given css selector, like document.querySelector.
 
 ###### Parameters
 
@@ -358,11 +374,65 @@ Select the the fist node that match the given selector, like document.querySelec
 
 [index.d.ts:68](https://github.com/umijs/niddle/blob/main/index.d.ts#L68)
 
+###### select(selectors)
+
+> **select**(`selectors`): [`NodeRepr`](README.md#noderepr)
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `selectors` | `"html"` |
+
+###### Returns
+
+[`NodeRepr`](README.md#noderepr)
+
+###### Defined in
+
+[index.d.ts:97](https://github.com/umijs/niddle/blob/main/index.d.ts#L97)
+
+###### select(selectors)
+
+> **select**(`selectors`): [`NodeRepr`](README.md#noderepr)
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `selectors` | `"head"` |
+
+###### Returns
+
+[`NodeRepr`](README.md#noderepr)
+
+###### Defined in
+
+[index.d.ts:98](https://github.com/umijs/niddle/blob/main/index.d.ts#L98)
+
+###### select(selectors)
+
+> **select**(`selectors`): [`NodeRepr`](README.md#noderepr)
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `selectors` | `"body"` |
+
+###### Returns
+
+[`NodeRepr`](README.md#noderepr)
+
+###### Defined in
+
+[index.d.ts:99](https://github.com/umijs/niddle/blob/main/index.d.ts#L99)
+
 ##### selectAll()
 
 > **selectAll**(`selectors`): [`NodeRepr`](README.md#noderepr)[]
 
-Select all nodes that match the given selector, like document.querySelectorAll.
+Select all nodes that match the given css selector, like document.querySelectorAll.
 
 ###### Parameters
 

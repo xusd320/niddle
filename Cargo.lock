@@ -207,7 +207,7 @@ checksum = "b71991ff56294aa922b450139ee08b3bfc70982c6b2c7562771375cf73542dd4"
 [[package]]
 name = "kuchikiki"
 version = "0.8.2"
-source = "git+https://github.com/xusd320/kuchikiki.git?rev=c671c7b#c671c7b88bb3256ac74995cda83f37c782f6d4ab"
+source = "git+https://github.com/xusd320/kuchikiki.git?rev=f1b69c1#f1b69c1a68d053f0d2c61a886e2977837b0a69ff"
 dependencies = [
  "cssparser",
  "html5ever",
