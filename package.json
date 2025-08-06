@@ -5,7 +5,8 @@
   "types": "index.d.ts",
   "files": [
     "index.js",
-    "index.d.ts"
+    "index.d.ts",
+    "API.md"
   ],
   "napi": {
     "name": "niddle",
@@ -71,7 +72,7 @@
     "patchdts": "cat ./patch.d.ts >> ./index.d.ts",
     "benchmark": "node ./benchmark/benchmark.mjs",
     "prepare": "husky install",
-    "docs": "npx typedoc && mv ./docs/README.md ./README.md"
+    "docs": "npx typedoc && mv ./docs/README.md ./API.md"
   },
   "repository": "https://github.com/umijs/niddle",
   "packageManager": "yarn@4.3.1",
