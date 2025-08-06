@@ -1,6 +1,6 @@
 {
   "name": "@niddle-rs/niddle-android-arm-eabi",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "os": [
     "android"
   ],
