@@ -223,7 +223,6 @@ jobs:
           - host: macos-latest
             target: aarch64-apple-darwin
         node:
-          - "18"
           - "20"
     runs-on: ${{ matrix.settings.host }}
     steps:
@@ -253,7 +252,6 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - "18"
           - "20"
     runs-on: ubuntu-latest
     steps:
@@ -283,7 +281,6 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - "18"
           - "20"
     runs-on: ubuntu-latest
     steps:
@@ -315,7 +312,6 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - "18"
           - "20"
     runs-on: ubuntu-latest
     steps:
@@ -388,7 +384,6 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - "18"
           - "20"
     runs-on: ubuntu-latest
     steps:
