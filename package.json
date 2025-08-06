@@ -47,12 +47,10 @@
     "@napi-rs/cli": "^2.18.4",
     "@taplo/cli": "^0.7.0",
     "ava": "^6.0.1",
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "^1.1.2",
     "htmlparser-benchmark": "^1.1.3",
     "husky": "^8.0.0",
     "js-beautify": "^1.15.1",
-    "typedoc": "^0.26.4",
-    "typedoc-plugin-markdown": "^4.2.1",
     "typescript": "^5.5.3"
   },
   "ava": {
@@ -65,14 +63,13 @@
     "artifacts": "napi artifacts",
     "build": "napi build --platform --release --cargo-name niddle_napi",
     "build:debug": "napi build --platform --cargo-name niddle_napi",
-    "prepublishOnly": "yarn patchdts && yarn docs && napi prepublish -t npm",
+    "prepublishOnly": "yarn patchdts && napi prepublish -t npm",
     "universal": "napi universal",
     "version": "napi version",
     "test": "ava",
     "patchdts": "cat ./patch.d.ts >> ./index.d.ts",
     "benchmark": "node ./benchmark/benchmark.mjs",
-    "prepare": "husky install",
-    "docs": "npx typedoc && mv ./docs/README.md ./README.md"
+    "prepare": "husky install"
   },
   "repository": "https://github.com/xusd320/niddle",
   "packageManager": "yarn@4.3.1",
