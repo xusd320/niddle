@@ -21,14 +21,13 @@ npm install niddle
 
 ```js
 const { parse } = require('niddle');
+const root = parse('<div id="foo" class="bar">hello <span>world</span></div>');
 
-const html = '<div id="main"><span>Hello</span></div>';
-const root = parse(html);
-
-const mainDiv = root.select('#main');
-mainDiv.append('<p>World</p>');
-
-console.log(mainDiv.outerHtml()); // <div id="main"><span>Hello</span><p>World</p></div>
+const div = root.select('div');
+console.log(div.getAttribute('id')); // "foo"
+console.log(div.text()); // "hello world"
+div.setAttribute('title', 'my-title');
+console.log(div.outerHtml()); // <div id="foo" class="bar" title="my-title">hello <span>world</span></div>
 ```
 
 ## API Documentation
@@ -100,18 +99,6 @@ Represents a DOM node and provides various manipulation methods.
 - **text(): string**
   - Gets the text content of the node.
 
-#### Example
-
-```js
-const { parse } = require('niddle');
-const root = parse('<div id="foo" class="bar">hello <span>world</span></div>');
-
-const div = root.select('div');
-console.log(div.getAttribute('id')); // "foo"
-console.log(div.text()); // "hello world"
-div.setAttribute('title', 'my-title');
-console.log(div.outerHtml()); // <div id="foo" class="bar" title="my-title">hello <span>world</span></div>
-```
 
 ## Contributing
 
